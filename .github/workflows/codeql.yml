@@ -61,6 +61,12 @@ jobs:
         # queries: security-extended,security-and-quality
 
 
+    # Make sure that the correct JDK version is available.
+    - name: Setup Java JDK
+      uses: actions/setup-java@v1.4.4
+      with:
+        java-version: 15
+    
     # Autobuild attempts to build any compiled languages (C/C++, C#, Go, Java, or Swift).
     # If this step fails, then you should remove it and run the build manually (see below)
     - name: Autobuild

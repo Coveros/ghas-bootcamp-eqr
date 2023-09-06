@@ -42,9 +42,9 @@ public class BlobController {
 
     private Blob deserializeBlob(InputStream inputStream) throws IOException, ClassNotFoundException{
         ObjectInputStream in = new ObjectInputStream(inputStream);
-        Blob b = (Blob)in.readObject();
+        Blob blob = (Blob)in.readObject();
         in.close();
-        return b;
+        return blob;
     }
 
     @GetMapping("/blob/{id}")
